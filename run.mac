@@ -1,0 +1,29 @@
+/control/verbose 2
+/control/saveHistory
+/run/verbose 2
+
+
+/run/useMaximumLogicalCores
+
+/run/initialize
+/control/execute beam.mac
+
+/analysis/setFileName aluminum_shield.root
+/customDet/setShieldMaterial aluminum
+/run/reinitializeGeometry
+/run/beamOn 3000000
+
+/analysis/setFileName steel_shield.root
+/customDet/setShieldMaterial steel
+/run/reinitializeGeometry
+/run/beamOn 3000000
+
+/analysis/setFileName polypropylene_shield.root
+/customDet/setShieldMaterial polypropylene
+/run/reinitializeGeometry
+/run/beamOn 3000000
+
+/analysis/setFileName wax_shield.root
+/customDet/setShieldMaterial wax
+/run/reinitializeGeometry
+/run/beamOn 3000000
